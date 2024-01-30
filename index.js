@@ -1,6 +1,8 @@
 const numberElBtn = document.querySelectorAll(".rating__card__buttons__number-btn");
 const submitBtn = document.querySelector(".submit-btn")
 const thankYouPage = document.querySelector(".container__thank-you-card")
+const mainPage = document.querySelector(".rating__card")
+
 let rating = 0;
 
 
@@ -13,11 +15,9 @@ numberElBtn.forEach(btn => {
 
 submitBtn.addEventListener("click", function() {
     
-    if (submitBtn === "none") {
+
         thankYouPage.style.display = "flex"
-    } else {
-        thankYouPage.style.display ="none"
-    }
+        mainPage.style.display = "none"
 
 })
 

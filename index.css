@@ -56,11 +56,13 @@ body {
     font-size: 15px;
 }
 
-
-button {
-    display: ;
-    width: 10%;
+.rating__card__buttons {
+    display:flex;
+    justify-content: space-evenly;
 }
+
+
+
 
 .submit-btn {
     text-align: center;

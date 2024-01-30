@@ -70,7 +70,7 @@ body {
     margin: 1.5rem 0;
 }
 
-.rating__card__buttons__number-btn {
+.rating__card__buttons__number-btn-label {
     cursor:pointer;
     height:50px;
     width:50px;
@@ -86,16 +86,16 @@ body {
     overflow: hidden;
 }
 
-.rating__card__buttons__number-btn:hover {
+.rating__card__buttons__number-btn-label:hover {
     color:var(--White);
     background-color:var(--Light-Grey);
 }
 
-.rating__card__buttons__number-btn input[type="radio"] {
+.rating__card__buttons__number-btn-label input[type="radio"] {
     display:none;
 }
 
-.rating__card__buttons__number-btn:has(input[type="radio"]:checked) {
+.rating__card__buttons__number-btn-label:has(input[type="radio"]:checked) {
     color:var(--White);
     background-color:var(--Orange);
 }

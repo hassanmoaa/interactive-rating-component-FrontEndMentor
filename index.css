@@ -6,6 +6,7 @@
     --White: hsl(0, 0%, 100%);
     --Light-Grey: hsl(217, 12%, 63%);
     --Medium-Grey: hsl(216, 12%, 54%);
+    --Medium-Grey-Alpha: hsla(216, 12%, 54%, 0.174);
     --Dark-Blue: hsl(213, 19%, 18%);
     --Very-Dark-Blue: hsl(216, 12%, 8%);
 
@@ -26,7 +27,7 @@ body {
 }
 
 .container {
-    background-color: var(--Dark-Blue);
+    background: radial-gradient(112.06% 54.21% at 55.84% 0%, #4B5461 0%, #34383F 46.85%, #252D37 100%); 
     width: 50%;
     margin: 10rem auto;
     border-radius: 20px;
@@ -35,15 +36,22 @@ body {
 .rating__card {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
-    
+    padding: 2rem;    
 }
 
-.rating__card--img {
-    width: 20px;
-    margin:  .5rem;
-    border-radius: 50%;
-    background-color: var(--Medium-Grey);
+.container__rating__card__image-container {
+    max-width:max-content;
+    padding:1em;
+    display:flex;
+    align-items:center;
+    justify-content:center;    
+    background-color:var(--Medium-Grey-Alpha);
+    border-radius:50%;
+}
+
+.rating__card__img {
+    height:20px;
+    width:20px;
 }
 
 .rating__card--h1 {
@@ -63,15 +71,25 @@ body {
 }
 
 .rating__card__buttons__number-btn {
+    cursor:pointer;
     margin: 5px;
     padding: 20px 25px;
-    background: var(--Very-Dark-Blue);
+    background:var(--Medium-Grey-Alpha);
     border: none;
     border-radius: 100%;
     color: var(--Light-Grey);
+    transition:all 0.3s ease;
 }
 
+.rating__card__buttons__number-btn:hover {
+    color:var(--White);
+    background-color:var(--Light-Grey);
+}
 
+.rating__card__buttons__number-btn:active {
+    color:var(--White);
+    background-color:var(--Orange);
+}
 
 .submit-btn {
     text-align: center;
@@ -83,6 +101,48 @@ body {
     padding:  10px;
     border-radius: 30px;
     text-transform: uppercase;
+    transition:all 0.3s ease;
+}
+
+.submit-btn:hover {
+    color:var(--Orange);    
+    background-color:var(--White);
+}
+
+.container__thank-you-card {
+    padding:2em;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:2em;
+    display:none;
+}
+
+.container__thank-you-card__rating {
+    color:var(--Orange);
+    padding:0.5em 1em;
+    font-family:var(--main-font);
+    font-size:1rem;
+    font-weight:500;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    border-radius:20px;
+    background-color:var(--Medium-Grey-Alpha);
+}
+
+.container__thank-you-card__message {
+    color:var(--White);
+    font-family:var(--main-font);
+    font-size:2rem;
+    font-weight:900;
+}
+
+.container__thank-you-card__appreciation-message {
+    color:var(--Light-Grey);
+    font-size:1rem;
+    font-weight:500;
+    text-align:center;
 }
 
 /*footer*/

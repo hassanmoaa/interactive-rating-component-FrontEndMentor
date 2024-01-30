@@ -99,7 +99,8 @@ body {
     font-weight: 700;
     text-decoration: none;
     width: 100%;
-    padding:  10px;
+    padding:  15px;
+    border: none;
     border-radius: 30px;
     text-transform: uppercase;
     transition:all 0.3s ease;
@@ -108,6 +109,7 @@ body {
 .submit-btn:hover {
     color:var(--Orange);    
     background-color:var(--White);
+    cursor: pointer;
 }
 
 .container__thank-you-card {

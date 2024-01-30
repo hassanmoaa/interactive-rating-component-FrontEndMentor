@@ -72,8 +72,12 @@ body {
 
 .rating__card__buttons__number-btn {
     cursor:pointer;
+    height:50px;
+    width:50px;
     margin: 5px;
-    padding: 20px 25px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     background:var(--Medium-Grey-Alpha);
     border: none;
     border-radius: 100%;
@@ -87,7 +91,11 @@ body {
     background-color:var(--Light-Grey);
 }
 
-.rating__card__buttons__number-btn:active {
+.rating__card__buttons__number-btn input[type="radio"] {
+    display:none;
+}
+
+.rating__card__buttons__number-btn:has(input[type="radio"]:checked) {
     color:var(--White);
     background-color:var(--Orange);
 }

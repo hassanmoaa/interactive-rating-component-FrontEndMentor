@@ -14,10 +14,7 @@ numberElBtn.forEach(btn => {
 })
 
 submitBtn.addEventListener("click", function() {
-    
-
         thankYouPage.style.display = "flex"
         mainPage.style.display = "none"
-
 })
 

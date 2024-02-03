@@ -3,13 +3,16 @@ const submitBtn = document.querySelector(".submit-btn")
 const thankYouPage = document.querySelector(".container__thank-you-card")
 const mainPage = document.querySelector(".rating__card")
 
+
 let rating = 0
 
 
 // add a click event for each rating number button
 numberElBtn.forEach(btn => {
     btn.addEventListener('click',function () {
-        console.log('hello world');
+
+        rating = this.dataset.ratingNumber;
+
     });
 })
 
@@ -20,4 +23,3 @@ submitBtn.addEventListener("click", function() {
 
 
 
-rating.textContent = 

@@ -3,7 +3,7 @@ const submitBtn = document.querySelector(".submit-btn")
 const thankYouPage = document.querySelector(".container__thank-you-card")
 const mainPage = document.querySelector(".rating__card")
 
-let ratingElNumber = document.querySelector("#user-rating-number-element")
+let ratingElNumber = document.querySelector(".container__thank-you-card__rating")
 
 let rating = 0
 
@@ -13,7 +13,7 @@ numberElBtn.forEach(btn => {
     btn.addEventListener('click',function () {
 
         rating = this.dataset.ratingNumber
-        ratingElNumber.innerText = rating 
+        ratingElNumber.innerText = `You selected ${rating} out of 5`
 
 
     });

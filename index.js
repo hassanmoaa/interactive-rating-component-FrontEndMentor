@@ -20,6 +20,11 @@ numberElBtn.forEach(btn => {
 })
 
 submitBtn.addEventListener("click", function() {
+    if (rating === 0) {
+        window.alert("You need to first select a rating number")
+    } else {
         thankYouPage.style.display = "flex"
         mainPage.style.display = "none"
+    }
 })
+
